@@ -11,12 +11,12 @@ void bubbleSort(int * list , int n)
     int temp;
     //In every iteration of this loop we will find next maximum; so only need to find N-1
     //Maximums.
-    for(int i=0;i<=n-1;i++)
+    for(int i=0;i<n-1;i++)//[0] to [n-2] i.e. n-1 times
         {
             //numOfSwaps is to count the num of swaps; if 0 then it indicates that list is in non decreasing order and in that case we just return.
             numOfSwaps = 0;
             //Finding next maximum in only remaining list;
-            for(int j=0; j<n-1-i; j++)
+            for(int j=0; j<n-1-i; j++) //[0 to n-2]  to [0 to 0 in this 2nd last minimum will be selected]
             {
             //    printf("Comparing %d with %d",list[j] ,list[j+1]);
                 //In bubble sort we simply compare with just next element
